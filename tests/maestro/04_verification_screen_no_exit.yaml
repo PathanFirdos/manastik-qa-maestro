@@ -1,0 +1,12 @@
+﻿appId: com.manastik.dadtmedico
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Verification in progress"
+    timeout: 25000
+- assertVisible: "Verification in progress"
+- assertVisible: ".*verifying your profile.*"
+- assertNotVisible: "Logout"
+- assertNotVisible: "Log out"
+- assertNotVisible: "Refresh"
+- takeScreenshot: evidence/screenshots/04_verification_no_exit

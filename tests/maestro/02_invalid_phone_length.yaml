@@ -1,0 +1,22 @@
+﻿appId: com.manastik.dadtmedico
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Login|Send OTP"
+    timeout: 25000
+- runFlow:
+    when:
+      visible: "Login"
+    commands:
+      - tapOn: "Login"
+- extendedWaitUntil:
+    visible: "Send OTP"
+    timeout: 15000
+- tapOn:
+    text: ".*Phone Number.*"
+- eraseText: 20
+- inputText: "987654321"
+- hideKeyboard
+- tapOn: "Send OTP"
+- assertNotVisible: "Enter the security code"
+- takeScreenshot: 02_invalid_phone_length

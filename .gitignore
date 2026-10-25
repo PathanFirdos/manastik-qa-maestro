@@ -1,0 +1,18 @@
+evidence/reports/ui_*.xml
+evidence/debug/
+evidence/reports/crash_log.txt
+*.apk
+
+*.apk
+WhatsApp Image*.jpeg
+evidence/debug/
+
+*.apk
+WhatsApp Image*.jpeg
+evidence/debug/
+evidence/reports/crash_log.txt
+
+evidence/reports/bug01_logcat.txt
+evidence/debug/
+*.apk
+WhatsApp Image*.jpeg

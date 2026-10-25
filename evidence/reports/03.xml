@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="RZ8W50A1W1F" tests="1" failures="0" time="92.867" timestamp="2026-10-25T12:23:11">
+    <testcase id="03_invalid_otp" name="03_invalid_otp" classname="03_invalid_otp" file="tests\maestro\03_invalid_otp.yaml" time="92.834" timestamp="2026-10-25T12:23:11" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

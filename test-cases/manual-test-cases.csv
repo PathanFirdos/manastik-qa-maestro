@@ -1,0 +1,33 @@
+ID,Area,Test case,Expected result,Result,Automation,Notes
+TC-01,Login,"Enter a 9-digit phone number","Send OTP stays disabled / OTP screen does not open",Pass,02_invalid_phone_length.yaml,"Disabled look checked by hand; flow checks the OTP screen does not open"
+TC-02,OTP,"Enter OTP 000000","'Invalid security code' shown, Confirm disabled",Pass,03_invalid_otp.yaml,"Flow checks the message only"
+TC-03,OTP,"Enter OTP 123458","'Invalid security code' shown",Pass,,Manual only
+TC-04,OTP,"Enter OTP 111111 for a new account","Personal details opens (Stage 1 of 7)",Pass,,Manual only
+TC-05,Create account,"Open OTP screen with empty boxes","Confirm disabled",Pass,,Manual only
+TC-06,Email code,"Enter email code 111111","Code accepted, flow continues",Pass,,Manual only
+TC-07,Email code,"Email code 111111 accepted (second observation)","Code accepted",Pass,,"Overlaps TC-06"
+TC-08,Email code,"Tap Go Back from the email code screen","Entered personal details are kept",Pass,,Manual only
+TC-09,Personal details,"Change the email address","Other details are kept",Pass,,Manual only
+TC-10,Login,"Log in with 111111 while onboarding is unfinished","Resume dialog appears",Pass,,Manual only
+TC-11,Resume,"Tap Resume from Last Save","Returns to the last step with data kept",Pass,,Manual only
+TC-12,Permissions,"First launch","Notification permission dialog appears",Pass,,"'Don't allow' path should also be captured"
+TC-13,Login,"Leave the phone field empty","Send OTP disabled",Pass,,Manual only
+TC-14,Personal details,"Leave required fields empty","Next blocked",Pass,,Manual only
+TC-15,Role,"Open role selection","Medical and Administrative choices are shown",Pass,,Manual only
+TC-16,Documents,"Upload documents in the qualification slots","Next enabled after the required slots are filled",Pass,,"See risk R-1 in bug-reports.md"
+TC-17,Achievements,"Skip optional achievements","Next works with none added",Pass,,Manual only
+TC-18,Institution,"Search with partial text 'bhart'","Matching hospital listed",Pass,,Manual only
+TC-19,Institution,"Add a new institution manually","Institution added",Pass,,Manual only
+TC-20,Practice details,"Tap Next on Stage 7 with all fields empty","Required-field errors on all five fields",Pass,,"Languages Spoken has no red border (see BUG-05)"
+TC-21,End to end,"Complete the Medical path with valid data","Reaches 'Verification in progress'",Pass,,"Manual run, about 3 minutes (10:41 to 10:44). Not automated: needs a fresh number or reset"
+TC-22,Verification,"Look for Logout, Log out or Refresh on 'Verification in progress'","Observed: none present",Pass (observation),04_verification_screen_no_exit.yaml,"Flow passed 2 of 2 runs; see BUG-02"
+TC-23,Practice details,"Tap Next on Stage 7 with only Specialised Procedure empty","Next blocked",Not run,,"Retest: an earlier run may have bypassed this field"
+TC-24,Personal details,"Enter a clearly under-age date of birth (e.g. 10 years)","Rejected, or documented policy",Not run,,"DOB 25/10/2008 (17 on the test date) was accepted; policy unknown"
+TC-25,Experience,"Enter a future end date without 'Currently working'","Rejected",Not run,,"Date picker allows days after today; field not confirmed"
+TC-26,Personal details,"Email format negatives: testgmail.com, test@, test@gmail, test@.com, test@@gmail.com, space in address","Rejected, Next blocked",Not run,,"An earlier screenshot showed an error with Next still enabled; unconfirmed"
+TC-27,OTP,"Wait for the resend timer to end","'Resend code' appears",Not run,,Manual or Maestro
+TC-28,Login,"Phone number formats: 11 digits, letters, pasted text, first digit 0 to 5","Rejected",Not run,,Manual
+TC-29,Stage navigation,"Find Stage 5 on the Medical path","Stage 5 screen exists and is numbered",Not run,,"Screenshots jump from Stage 4 to Stage 6"
+TC-30,Login,"Log in with a number that has no account","'Number not registered' or similar",Not run,,"Observed once: onboarding started instead. Needs a brand-new number to confirm"
+TC-31,OTP,"Expired OTP; old code stops working after resend",n/a,Blocked,,"OTP is fixed (111111); not testable in this build"
+TC-32,Email,"Non-existent mailbox is rejected",n/a,Blocked,,"No email is sent in the test build"

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="RZ8W50A1W1F" tests="1" failures="1" time="42.667" timestamp="2026-10-25T10:57:03">
+    <testcase id="01_relaunch_shows_verification" name="01_relaunch_shows_verification" classname="01_relaunch_shows_verification" file="tests\maestro\01_relaunch_shows_verification.yaml" time="42.646" timestamp="2026-10-25T10:57:03" status="ERROR">
+      <failure>Assertion is false: "Verification in progress" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

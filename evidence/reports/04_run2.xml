@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="RZ8W50A1W1F" tests="1" failures="0" time="39.311" timestamp="2026-10-25T11:27:08">
+    <testcase id="04_verification_screen_no_exit" name="04_verification_screen_no_exit" classname="04_verification_screen_no_exit" file="tests\maestro\04_verification_screen_no_exit.yaml" time="39.292" timestamp="2026-10-25T11:27:08" status="SUCCESS"/>
+  </testsuite>
+</testsuites>
