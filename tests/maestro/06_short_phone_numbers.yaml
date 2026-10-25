@@ -1,0 +1,28 @@
+﻿appId: com.manastik.dadtmedico
+---
+- launchApp
+- tapOn:
+    text: "Don't allow"
+    optional: true
+- extendedWaitUntil:
+    visible: "Login|Send OTP"
+    timeout: 30000
+- runFlow:
+    when:
+      visible: "Login"
+    commands:
+      - tapOn: "Login"
+- extendedWaitUntil:
+    visible: "Send OTP"
+    timeout: 15000
+- tapOn:
+    text: ".*Phone Number.*"
+- eraseText: 20
+- inputText: ${SHORT_PHONE}
+- hideKeyboard
+- tapOn: "Send OTP"
+- waitForAnimationToEnd:
+    timeout: 3000
+- assertNotVisible: "Enter the security code"
+- assertVisible: "Send OTP"
+- takeScreenshot: 06_short_phone
