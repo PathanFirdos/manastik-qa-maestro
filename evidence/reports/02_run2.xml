@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites>
-  <testsuite name="Test Suite" device="RZ8W50A1W1F" tests="1" failures="1" time="46.1" timestamp="2026-10-25T12:15:11">
-    <testcase id="02_invalid_phone_length" name="02_invalid_phone_length" classname="02_invalid_phone_length" file="tests\maestro\02_invalid_phone_length.yaml" time="46.074" timestamp="2026-10-25T12:15:11" status="ERROR">
+  <testsuite name="Test Suite" device="RZ8W50A1W1F" tests="1" failures="1" time="47.024" timestamp="2026-10-25T15:40:14">
+    <testcase id="02_invalid_phone_length" name="02_invalid_phone_length" classname="02_invalid_phone_length" file="tests\maestro\02_invalid_phone_length.yaml" time="46.981" timestamp="2026-10-25T15:40:14" status="ERROR">
       <failure>Assertion is false: "Login|Send OTP" is visible</failure>
     </testcase>
   </testsuite>

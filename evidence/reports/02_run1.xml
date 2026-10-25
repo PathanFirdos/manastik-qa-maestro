@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="RZ8W50A1W1F" tests="1" failures="0" time="92.927" timestamp="2026-10-25T15:38:01">
+    <testcase id="02_invalid_phone_length" name="02_invalid_phone_length" classname="02_invalid_phone_length" file="tests\maestro\02_invalid_phone_length.yaml" time="92.878" timestamp="2026-10-25T15:38:01" status="SUCCESS"/>
+  </testsuite>
+</testsuites>
